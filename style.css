@@ -21,7 +21,7 @@
 }
 
 header {
-background: url(./imagens/baker1.jpg) no-repeat center center ;
+background: url(./imagens/baker8.jpg) no-repeat center center ;
 background-size:cover;
 grid-area: header;
 }
@@ -42,10 +42,12 @@ grid-area: footer;
 }
 
 .menu h1 {
+    font-size: 25px;
     font-family: 'Berkshire Swash', cursive;
 }
 .menu ul {
     list-style: none;
+    cursor: pointer;
 }
 
 .menu li {
@@ -61,7 +63,7 @@ grid-area: footer;
 }
 
 .menu2 h1 {
-    font-size: 40px;
+    font-size: 3em;
     font-family: 'Berkshire Swash', cursive;
 }
 
@@ -70,7 +72,7 @@ grid-area: footer;
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
 }
-.menu2 button {
+.menu2 button  {
     font-size: 20px;
     margin: 30px 0px 20px 0px;
     padding: 8px 20px 8px 20px;
@@ -79,6 +81,18 @@ grid-area: footer;
     border-radius: 50px;
     font-family: 'Open Sans', sans-serif;
     font-weight: bolder;
+    cursor: pointer;
+    
+    
+}
+
+.menu2 button a {
+    color: rgb(255, 194, 207);
+    text-decoration: none;
+}
+
+.menu2 button a:hover{
+    cursor: pointer;
 }
 
 .menu3{
@@ -206,8 +220,39 @@ grid-area: footer;
    height: 2vh;
 }
 
-@media (max-width: 700px){
+#menu-aberto {
+    display: none;
+}
 
+
+
+@media (max-width: 700px){
+     #menu-aberto {
+        display: block;
+        margin-left: 88vw;
+        cursor: pointer;
+     }
+    .menu ul {
+        
+    }
+     .menu li {
+        
+       display: flex;
+       background-color: rgb(255, 191, 236);
+     }
+
+     .hide {
+        opacity: 0;
+        transition: 0.5s;
+    }
+    .show {
+        opacity: 1;
+        transition: 1s;
+    }
+     .menu li:hover {
+       
+        background-color: rgb(201, 155, 245);
+     }
     .flavours {
         display: block;
     }
@@ -222,3 +267,4 @@ grid-area: footer;
         padding: 3px;
      }
 }
+
